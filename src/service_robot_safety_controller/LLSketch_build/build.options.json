@@ -1,0 +1,9 @@
+{
+  "additionalFiles": "",
+  "compiler.optimization_flags": "",
+  "customBuildProperties": "build.warn_data_percentage=75",
+  "fqbn": "arduino:mbed_portenta:envie_m7:split=100_0",
+  "hardwareFolders": "C:\\Users\\potlo\\AppData\\Local\\T\\A\\packages",
+  "otherLibrariesFolders": "C:\\Users\\potlo\\AppData\\Local\\T\\U\\libraries",
+  "sketchLocation": "C:\\Users\\potlo\\Desktop\\rover_safety_controller\\src\\LLSketch"
+}
