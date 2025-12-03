@@ -1,0 +1,1 @@
+<WatchList><WatchItem name="driver_left_channel" format="%#.3f" task="global"/><WatchItem name="driver_right_channel" format="%#.3f" task="global"/><WatchItem name="driver_left_channel_pulses_cnt" format="%ld" task="global"/><WatchItem name="driver_right_channel_pulses_cnt" format="%ld" task="global"/></WatchList>

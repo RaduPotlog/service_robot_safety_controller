@@ -5,5 +5,5 @@
   "fqbn": "arduino:mbed_portenta:envie_m7:split=100_0",
   "hardwareFolders": "C:\\Users\\potlo\\AppData\\Local\\T\\A\\packages",
   "otherLibrariesFolders": "C:\\Users\\potlo\\AppData\\Local\\T\\U\\libraries",
-  "sketchLocation": "C:\\Users\\potlo\\Desktop\\rover_safety_controller\\src\\LLSketch"
+  "sketchLocation": "C:\\Users\\potlo\\Desktop\\service_robot_safety_controller\\src\\service_robot_safety_controller\\LLSketch"
 }

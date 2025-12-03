@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <plcProject caseSensitive="false" extendedIdNames="false" useCustomWorkspace="true" debugMode="false" extcheck="true" SFCControl="false" strictPointerCheck="true" verboseWarningMode="false" iecTypeConversionRules="false" PNContactsOnEachNetwork="false" LocalVarsFBAccess="false" strictEnumsCheck="true" copyWarningThreshold="200" version="2.11" useLD2="true" useXPLCFiles="false" useFBMethods="false" customSortOfProjectTree="false" autoDerefPointers="false">
 	<image>service_robot_safety_controller.imgx</image>
-	<commSettings>Modbus:247,1000,M#COM:16,38400,N,8,1,H</commSettings>
+	<commSettings>Modbus:247,1000,M#COM:8,38400,N,8,1,H</commSettings>
 	<sources>
 		<main>
 			<resources>
@@ -286,256 +286,388 @@
 						</LD2>
 					</sourceCode>
 				</program>
-				<program name="driver" version="1.0.0" creationDate="1761719245" lastModifiedDate="1761731173" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="">
+				<program name="driver" version="1.0.0" creationDate="1761719245" lastModifiedDate="1764760312" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="">
 					<vars/>
 					<iecDeclaration active="FALSE"/>
 					<sourceCode type="FBD">
 						<FBD>
-							<network order="N:1" width="200" height="12" disabled="false" disableCondition="" error="false">
-								<conn id="C:11" error="false">
-									<segment xStart="24" yStart="4" xEnd="24" yEnd="9"/>
-									<segment xEnd="26" yEnd="9"/>
-									<startPin>I:0</startPin>
-									<endPin>F:1.#0</endPin>
-								</conn>
-								<conn id="C:9" error="false">
-									<segment xStart="23" yStart="4" xEnd="24" yEnd="4"/>
-									<startPin>O:8.2</startPin>
-									<endPin>I:0</endPin>
-								</conn>
-								<conn id="C:10" error="false">
-									<segment xStart="24" yStart="4" xEnd="31" yEnd="4"/>
-									<startPin>I:0</startPin>
-									<endPin>O:7.0</endPin>
-								</conn>
-								<cross id="I:0" error="false" x="24" y="4">
-									<top/>
-									<bottom>C:11</bottom>
-									<right>C:10</right>
-									<left>C:9</left>
-								</cross>
+							<network order="N:1" width="200" height="18" disabled="false" disableCondition="" error="false">
 								<conn id="C:0" error="false">
-									<segment xStart="9" yStart="4" xEnd="12" yEnd="4"/>
-									<startPin>V:3</startPin>
-									<endPin>F:2.#0</endPin>
-								</conn>
-								<conn id="C:1" error="false">
-									<segment xStart="17" yStart="4" xEnd="19" yEnd="4"/>
-									<startPin>F:2.#O</startPin>
-									<endPin>O:8.0</endPin>
-								</conn>
-								<conn id="C:2" error="false">
-									<segment xStart="12" yStart="6" xEnd="18" yEnd="6"/>
-									<segment xEnd="18" yEnd="5"/>
-									<segment xEnd="19" yEnd="5"/>
-									<startPin>V:4</startPin>
-									<endPin>O:8.1</endPin>
-								</conn>
-								<conn id="C:3" error="false">
-									<segment xStart="30" yStart="5" xEnd="31" yEnd="5"/>
-									<startPin>K:6</startPin>
-									<endPin>O:7.1</endPin>
-								</conn>
-								<conn id="C:4" error="false">
-									<segment xStart="31" yStart="9" xEnd="48" yEnd="9"/>
-									<startPin>F:1.#O</startPin>
-									<endPin>V:5</endPin>
-								</conn>
-								<conn id="C:5" error="false">
-									<segment xStart="34" yStart="4" xEnd="36" yEnd="4"/>
-									<startPin>O:7.2</startPin>
-									<endPin>F:10.#0</endPin>
-								</conn>
-								<conn id="C:6" error="false">
-									<segment xStart="41" yStart="4" xEnd="44" yEnd="4"/>
-									<startPin>F:10.#O</startPin>
-									<endPin>O:11.0</endPin>
-								</conn>
-								<conn id="C:7" error="false">
-									<segment xStart="40" yStart="7" xEnd="42" yEnd="7"/>
-									<segment xEnd="42" yEnd="5"/>
-									<segment xEnd="44" yEnd="5"/>
-									<startPin>K:9</startPin>
-									<endPin>O:11.1</endPin>
-								</conn>
-								<conn id="C:8" error="false">
-									<segment xStart="48" yStart="4" xEnd="48" yEnd="4"/>
-									<startPin>O:11.2</startPin>
-									<endPin>V:12</endPin>
-								</conn>
-								<const id="K:6" error="false" name="0.0" x="30" y="5">
-									<pin>C:3</pin>
-								</const>
-								<const id="K:9" error="false" name="5.0" x="40" y="7">
-									<pin>C:7</pin>
-								</const>
-								<var id="V:3" error="false" type="Input" name="motor_coil" x="9" y="4">
-									<pin>C:0</pin>
-								</var>
-								<var id="V:4" error="false" type="Input" name="driver_right_channel" x="12" y="6">
-									<pin>C:2</pin>
-								</var>
-								<var id="V:5" error="false" type="Output" name="right_motor_out" x="48" y="9">
-									<pin>C:4</pin>
-								</var>
-								<var id="V:12" error="false" type="Output" name="right_motor_dir_out" x="48" y="4">
-									<pin>C:8</pin>
-								</var>
-								<op id="O:7" error="false" width="3" name="GE" x="31" y="4">
-									<inputPin name="0" negated="false">C:10</inputPin>
-									<inputPin name="1" negated="false">C:3</inputPin>
-									<outputPin name="2" negated="false">C:5</outputPin>
-								</op>
-								<op id="O:8" error="false" width="4" name="MUL" x="19" y="4">
-									<inputPin name="0" negated="false">C:1</inputPin>
-									<inputPin name="1" negated="false">C:2</inputPin>
-									<outputPin name="2" negated="false">C:9</outputPin>
-								</op>
-								<op id="O:11" error="false" width="4" name="MUL" x="44" y="4">
-									<inputPin name="0" negated="false">C:6</inputPin>
-									<inputPin name="1" negated="false">C:7</inputPin>
-									<outputPin name="2" negated="false">C:8</outputPin>
-								</op>
-								<fun id="F:1" error="false" width="5" name="ABS" x="26" y="9">
-									<inputPin name="#0" negated="false">C:11</inputPin>
-									<outputPin name="#O" negated="false">C:4</outputPin>
-								</fun>
-								<fun id="F:2" error="false" width="5" name="TO_REAL" x="12" y="4">
-									<inputPin name="#0" negated="false">C:0</inputPin>
-									<outputPin name="#O" negated="false">C:1</outputPin>
-								</fun>
-								<fun id="F:10" error="false" width="5" name="TO_REAL" x="36" y="4">
-									<inputPin name="#0" negated="false">C:5</inputPin>
-									<outputPin name="#O" negated="false">C:6</outputPin>
-								</fun>
-							</network>
-							<network order="N:2" width="200" height="14" disabled="false" disableCondition="" error="false">
-								<conn id="C:11" error="false">
 									<segment xStart="24" yStart="6" xEnd="24" yEnd="11"/>
 									<segment xEnd="26" yEnd="11"/>
 									<startPin>I:0</startPin>
-									<endPin>F:3.#0</endPin>
+									<endPin>F:1.#0</endPin>
 								</conn>
-								<conn id="C:3" error="false">
+								<conn id="C:1" error="false">
 									<segment xStart="23" yStart="6" xEnd="24" yEnd="6"/>
-									<startPin>O:13.2</startPin>
+									<startPin>O:12.2</startPin>
 									<endPin>I:0</endPin>
 								</conn>
-								<conn id="C:10" error="false">
+								<conn id="C:2" error="false">
 									<segment xStart="24" yStart="6" xEnd="31" yEnd="6"/>
 									<startPin>I:0</startPin>
-									<endPin>O:12.0</endPin>
+									<endPin>O:11.0</endPin>
 								</conn>
 								<cross id="I:0" error="false" x="24" y="6">
 									<top/>
-									<bottom>C:11</bottom>
-									<right>C:10</right>
-									<left>C:3</left>
+									<bottom>C:0</bottom>
+									<right>C:2</right>
+									<left>C:1</left>
 								</cross>
-								<conn id="C:0" error="false">
-									<segment xStart="9" yStart="6" xEnd="12" yEnd="6"/>
-									<startPin>V:8</startPin>
-									<endPin>F:4.#0</endPin>
-								</conn>
-								<conn id="C:1" error="false">
-									<segment xStart="11" yStart="8" xEnd="19" yEnd="8"/>
-									<segment xEnd="19" yEnd="7"/>
-									<startPin>V:7</startPin>
-									<endPin>O:13.1</endPin>
-								</conn>
-								<conn id="C:2" error="false">
-									<segment xStart="17" yStart="6" xEnd="19" yEnd="6"/>
-									<startPin>F:4.#O</startPin>
-									<endPin>O:13.0</endPin>
+								<conn id="C:3" error="false">
+									<segment xStart="18" yStart="6" xEnd="19" yEnd="6"/>
+									<startPin>F:2.#O</startPin>
+									<endPin>O:12.0</endPin>
 								</conn>
 								<conn id="C:4" error="false">
-									<segment xStart="30" yStart="7" xEnd="31" yEnd="7"/>
-									<startPin>K:10</startPin>
+									<segment xStart="9" yStart="8" xEnd="18" yEnd="8"/>
+									<segment xEnd="18" yEnd="7"/>
+									<segment xEnd="19" yEnd="7"/>
+									<startPin>V:6</startPin>
 									<endPin>O:12.1</endPin>
 								</conn>
 								<conn id="C:5" error="false">
-									<segment xStart="48" yStart="6" xEnd="49" yEnd="6"/>
+									<segment xStart="30" yStart="7" xEnd="31" yEnd="7"/>
+									<startPin>K:9</startPin>
+									<endPin>O:11.1</endPin>
+								</conn>
+								<conn id="C:6" error="false">
+									<segment xStart="34" yStart="6" xEnd="36" yEnd="6"/>
 									<startPin>O:11.2</startPin>
-									<endPin>V:5</endPin>
+									<endPin>F:3.#0</endPin>
+								</conn>
+								<conn id="C:7" error="false">
+									<segment xStart="41" yStart="6" xEnd="44" yEnd="6"/>
+									<startPin>F:3.#O</startPin>
+									<endPin>O:13.0</endPin>
+								</conn>
+								<conn id="C:8" error="false">
+									<segment xStart="40" yStart="9" xEnd="42" yEnd="9"/>
+									<segment xEnd="42" yEnd="7"/>
+									<segment xEnd="44" yEnd="7"/>
+									<startPin>K:10</startPin>
+									<endPin>O:13.1</endPin>
+								</conn>
+								<conn id="C:9" error="false">
+									<segment xStart="6" yStart="6" xEnd="7" yEnd="6"/>
+									<startPin>V:5</startPin>
+									<endPin>F:4.#0</endPin>
+								</conn>
+								<conn id="C:10" error="false">
+									<segment xStart="12" yStart="6" xEnd="13" yEnd="6"/>
+									<startPin>F:4.#O</startPin>
+									<endPin>F:2.#0</endPin>
+								</conn>
+								<conn id="C:11" error="false">
+									<segment xStart="48" yStart="9" xEnd="49" yEnd="9"/>
+									<segment xEnd="49" yEnd="7"/>
+									<segment xEnd="51" yEnd="7"/>
+									<startPin>K:16</startPin>
+									<endPin>F:14.MN</endPin>
+								</conn>
+								<conn id="C:12" error="false">
+									<segment xStart="48" yStart="10" xEnd="50" yEnd="10"/>
+									<segment xEnd="50" yEnd="8"/>
+									<segment xEnd="51" yEnd="8"/>
+									<startPin>K:18</startPin>
+									<endPin>F:14.MX</endPin>
+								</conn>
+								<conn id="C:13" error="false">
+									<segment xStart="56" yStart="6" xEnd="58" yEnd="6"/>
+									<startPin>F:14.#O</startPin>
+									<endPin>V:8</endPin>
+								</conn>
+								<conn id="C:14" error="false">
+									<segment xStart="48" yStart="6" xEnd="51" yEnd="6"/>
+									<startPin>O:13.2</startPin>
+									<endPin>F:14.IN</endPin>
+								</conn>
+								<conn id="C:15" error="false">
+									<segment xStart="48" yStart="12" xEnd="51" yEnd="12"/>
+									<startPin>K:23</startPin>
+									<endPin>F:20.MN</endPin>
+								</conn>
+								<conn id="C:16" error="false">
+									<segment xStart="48" yStart="13" xEnd="51" yEnd="13"/>
+									<startPin>K:22</startPin>
+									<endPin>F:20.MX</endPin>
+								</conn>
+								<conn id="C:17" error="false">
+									<segment xStart="31" yStart="11" xEnd="51" yEnd="11"/>
+									<startPin>F:1.#O</startPin>
+									<endPin>F:20.IN</endPin>
+								</conn>
+								<conn id="C:18" error="false">
+									<segment xStart="56" yStart="11" xEnd="58" yEnd="11"/>
+									<startPin>F:20.#O</startPin>
+									<endPin>V:7</endPin>
+								</conn>
+								<const id="K:9" error="false" name="0.0" x="30" y="7">
+									<pin>C:5</pin>
+								</const>
+								<const id="K:10" error="false" name="5.0" x="40" y="9">
+									<pin>C:8</pin>
+								</const>
+								<const id="K:16" error="false" name="-5.0" x="48" y="9">
+									<pin>C:11</pin>
+								</const>
+								<const id="K:18" error="false" name="5.0" x="48" y="10">
+									<pin>C:12</pin>
+								</const>
+								<const id="K:22" error="false" name="1.0" x="48" y="13">
+									<pin>C:16</pin>
+								</const>
+								<const id="K:23" error="false" name="-1.0" x="48" y="12">
+									<pin>C:15</pin>
+								</const>
+								<var id="V:5" error="false" type="Input" name="motor_coil" x="6" y="6">
+									<pin>C:9</pin>
+								</var>
+								<var id="V:6" error="false" type="Input" name="driver_right_channel_speed" x="9" y="8">
+									<pin>C:4</pin>
+								</var>
+								<var id="V:7" error="false" type="Output" name="right_motor_out" x="58" y="11">
+									<pin>C:18</pin>
+								</var>
+								<var id="V:8" error="false" type="Output" name="right_motor_dir_out" x="58" y="6">
+									<pin>C:13</pin>
+								</var>
+								<op id="O:11" error="false" width="3" name="GE" x="31" y="6">
+									<inputPin name="0" negated="false">C:2</inputPin>
+									<inputPin name="1" negated="false">C:5</inputPin>
+									<outputPin name="2" negated="false">C:6</outputPin>
+								</op>
+								<op id="O:12" error="false" width="4" name="MUL" x="19" y="6">
+									<inputPin name="0" negated="false">C:3</inputPin>
+									<inputPin name="1" negated="false">C:4</inputPin>
+									<outputPin name="2" negated="false">C:1</outputPin>
+								</op>
+								<op id="O:13" error="false" width="4" name="MUL" x="44" y="6">
+									<inputPin name="0" negated="false">C:7</inputPin>
+									<inputPin name="1" negated="false">C:8</inputPin>
+									<outputPin name="2" negated="false">C:14</outputPin>
+								</op>
+								<fun id="F:1" error="false" width="5" name="ABS" x="26" y="11">
+									<inputPin name="#0" negated="false">C:0</inputPin>
+									<outputPin name="#O" negated="false">C:17</outputPin>
+								</fun>
+								<fun id="F:2" error="false" width="5" name="TO_REAL" x="13" y="6">
+									<inputPin name="#0" negated="false">C:10</inputPin>
+									<outputPin name="#O" negated="false">C:3</outputPin>
+								</fun>
+								<fun id="F:3" error="false" width="5" name="TO_REAL" x="36" y="6">
+									<inputPin name="#0" negated="false">C:6</inputPin>
+									<outputPin name="#O" negated="false">C:7</outputPin>
+								</fun>
+								<fun id="F:4" error="false" width="5" name="NOT" x="7" y="6">
+									<inputPin name="#0" negated="false">C:9</inputPin>
+									<outputPin name="#O" negated="false">C:10</outputPin>
+								</fun>
+								<fun id="F:14" error="false" width="5" name="LIMIT" x="51" y="6">
+									<inputPin name="IN" negated="false">C:14</inputPin>
+									<inputPin name="MN" negated="false">C:11</inputPin>
+									<inputPin name="MX" negated="false">C:12</inputPin>
+									<outputPin name="#O" negated="false">C:13</outputPin>
+								</fun>
+								<fun id="F:20" error="false" width="5" name="LIMIT" x="51" y="11">
+									<inputPin name="IN" negated="false">C:17</inputPin>
+									<inputPin name="MN" negated="false">C:15</inputPin>
+									<inputPin name="MX" negated="false">C:16</inputPin>
+									<outputPin name="#O" negated="false">C:18</outputPin>
+								</fun>
+							</network>
+							<network order="N:2" width="200" height="18" disabled="false" disableCondition="" error="false">
+								<conn id="C:0" error="false">
+									<segment xStart="24" yStart="6" xEnd="24" yEnd="11"/>
+									<segment xEnd="26" yEnd="11"/>
+									<startPin>I:0</startPin>
+									<endPin>F:2.#0</endPin>
+								</conn>
+								<conn id="C:1" error="false">
+									<segment xStart="23" yStart="6" xEnd="24" yEnd="6"/>
+									<startPin>O:12.2</startPin>
+									<endPin>I:0</endPin>
+								</conn>
+								<conn id="C:2" error="false">
+									<segment xStart="24" yStart="6" xEnd="31" yEnd="6"/>
+									<startPin>I:0</startPin>
+									<endPin>O:11.0</endPin>
+								</conn>
+								<cross id="I:0" error="false" x="24" y="6">
+									<top/>
+									<bottom>C:0</bottom>
+									<right>C:2</right>
+									<left>C:1</left>
+								</cross>
+								<conn id="C:3" error="false">
+									<segment xStart="8" yStart="8" xEnd="19" yEnd="8"/>
+									<segment xEnd="19" yEnd="7"/>
+									<startPin>V:6</startPin>
+									<endPin>O:12.1</endPin>
+								</conn>
+								<conn id="C:4" error="false">
+									<segment xStart="17" yStart="6" xEnd="19" yEnd="6"/>
+									<startPin>F:3.#O</startPin>
+									<endPin>O:12.0</endPin>
+								</conn>
+								<conn id="C:5" error="false">
+									<segment xStart="30" yStart="7" xEnd="31" yEnd="7"/>
+									<startPin>K:9</startPin>
+									<endPin>O:11.1</endPin>
 								</conn>
 								<conn id="C:6" error="false">
 									<segment xStart="41" yStart="6" xEnd="44" yEnd="6"/>
-									<startPin>F:2.#O</startPin>
-									<endPin>O:11.0</endPin>
+									<startPin>F:1.#O</startPin>
+									<endPin>O:10.0</endPin>
 								</conn>
 								<conn id="C:7" error="false">
 									<segment xStart="40" yStart="9" xEnd="44" yEnd="9"/>
 									<segment xEnd="44" yEnd="7"/>
-									<startPin>K:9</startPin>
-									<endPin>O:11.1</endPin>
+									<startPin>K:8</startPin>
+									<endPin>O:10.1</endPin>
 								</conn>
 								<conn id="C:8" error="false">
 									<segment xStart="34" yStart="6" xEnd="36" yEnd="6"/>
-									<startPin>O:12.2</startPin>
-									<endPin>F:2.#0</endPin>
+									<startPin>O:11.2</startPin>
+									<endPin>F:1.#0</endPin>
 								</conn>
 								<conn id="C:9" error="false">
-									<segment xStart="31" yStart="11" xEnd="49" yEnd="11"/>
-									<startPin>F:3.#O</startPin>
-									<endPin>V:6</endPin>
+									<segment xStart="6" yStart="6" xEnd="7" yEnd="6"/>
+									<startPin>V:7</startPin>
+									<endPin>F:14.#0</endPin>
 								</conn>
-								<const id="K:9" error="false" name="5.0" x="40" y="9">
+								<conn id="C:10" error="false">
+									<segment xStart="12" yStart="6" xEnd="12" yEnd="6"/>
+									<startPin>F:14.#O</startPin>
+									<endPin>F:3.#0</endPin>
+								</conn>
+								<conn id="C:11" error="false">
+									<segment xStart="48" yStart="6" xEnd="51" yEnd="6"/>
+									<startPin>O:10.2</startPin>
+									<endPin>F:16.IN</endPin>
+								</conn>
+								<conn id="C:12" error="false">
+									<segment xStart="48" yStart="9" xEnd="49" yEnd="9"/>
+									<segment xEnd="49" yEnd="7"/>
+									<segment xEnd="51" yEnd="7"/>
+									<startPin>K:17</startPin>
+									<endPin>F:16.MN</endPin>
+								</conn>
+								<conn id="C:13" error="false">
+									<segment xStart="48" yStart="10" xEnd="50" yEnd="10"/>
+									<segment xEnd="50" yEnd="8"/>
+									<segment xEnd="51" yEnd="8"/>
+									<startPin>K:18</startPin>
+									<endPin>F:16.MX</endPin>
+								</conn>
+								<conn id="C:14" error="false">
+									<segment xStart="56" yStart="6" xEnd="58" yEnd="6"/>
+									<startPin>F:16.#O</startPin>
+									<endPin>V:4</endPin>
+								</conn>
+								<conn id="C:15" error="false">
+									<segment xStart="48" yStart="12" xEnd="51" yEnd="12"/>
+									<startPin>K:23</startPin>
+									<endPin>F:20.MN</endPin>
+								</conn>
+								<conn id="C:16" error="false">
+									<segment xStart="48" yStart="13" xEnd="51" yEnd="13"/>
+									<startPin>K:22</startPin>
+									<endPin>F:20.MX</endPin>
+								</conn>
+								<conn id="C:17" error="false">
+									<segment xStart="56" yStart="11" xEnd="58" yEnd="11"/>
+									<startPin>F:20.#O</startPin>
+									<endPin>V:5</endPin>
+								</conn>
+								<conn id="C:18" error="false">
+									<segment xStart="31" yStart="11" xEnd="51" yEnd="11"/>
+									<startPin>F:2.#O</startPin>
+									<endPin>F:20.IN</endPin>
+								</conn>
+								<const id="K:8" error="false" name="5.0" x="40" y="9">
 									<pin>C:7</pin>
 								</const>
-								<const id="K:10" error="false" name="0.0" x="30" y="7">
-									<pin>C:4</pin>
-								</const>
-								<var id="V:5" error="false" type="Output" name="left_motor_dir_out" x="49" y="6">
+								<const id="K:9" error="false" name="0.0" x="30" y="7">
 									<pin>C:5</pin>
+								</const>
+								<const id="K:17" error="false" name="-5.0" x="48" y="9">
+									<pin>C:12</pin>
+								</const>
+								<const id="K:18" error="false" name="5.0" x="48" y="10">
+									<pin>C:13</pin>
+								</const>
+								<const id="K:22" error="false" name="1.0" x="48" y="13">
+									<pin>C:16</pin>
+								</const>
+								<const id="K:23" error="false" name="-1.0" x="48" y="12">
+									<pin>C:15</pin>
+								</const>
+								<var id="V:4" error="false" type="Output" name="left_motor_dir_out" x="58" y="6">
+									<pin>C:14</pin>
 								</var>
-								<var id="V:6" error="false" type="Output" name="left_motor_out" x="49" y="11">
+								<var id="V:5" error="false" type="Output" name="left_motor_out" x="58" y="11">
+									<pin>C:17</pin>
+								</var>
+								<var id="V:6" error="false" type="Input" name="driver_left_channel_speed" x="8" y="8">
+									<pin>C:3</pin>
+								</var>
+								<var id="V:7" error="false" type="Input" name="motor_coil" x="6" y="6">
 									<pin>C:9</pin>
 								</var>
-								<var id="V:7" error="false" type="Input" name="driver_left_channel" x="11" y="8">
-									<pin>C:1</pin>
-								</var>
-								<var id="V:8" error="false" type="Input" name="motor_coil" x="9" y="6">
-									<pin>C:0</pin>
-								</var>
-								<op id="O:11" error="false" width="4" name="MUL" x="44" y="6">
+								<op id="O:10" error="false" width="4" name="MUL" x="44" y="6">
 									<inputPin name="0" negated="false">C:6</inputPin>
 									<inputPin name="1" negated="false">C:7</inputPin>
-									<outputPin name="2" negated="false">C:5</outputPin>
+									<outputPin name="2" negated="false">C:11</outputPin>
 								</op>
-								<op id="O:12" error="false" width="3" name="GE" x="31" y="6">
-									<inputPin name="0" negated="false">C:10</inputPin>
-									<inputPin name="1" negated="false">C:4</inputPin>
+								<op id="O:11" error="false" width="3" name="GE" x="31" y="6">
+									<inputPin name="0" negated="false">C:2</inputPin>
+									<inputPin name="1" negated="false">C:5</inputPin>
 									<outputPin name="2" negated="false">C:8</outputPin>
 								</op>
-								<op id="O:13" error="false" width="4" name="MUL" x="19" y="6">
-									<inputPin name="0" negated="false">C:2</inputPin>
-									<inputPin name="1" negated="false">C:1</inputPin>
-									<outputPin name="2" negated="false">C:3</outputPin>
+								<op id="O:12" error="false" width="4" name="MUL" x="19" y="6">
+									<inputPin name="0" negated="false">C:4</inputPin>
+									<inputPin name="1" negated="false">C:3</inputPin>
+									<outputPin name="2" negated="false">C:1</outputPin>
 								</op>
-								<fun id="F:2" error="false" width="5" name="TO_REAL" x="36" y="6">
+								<fun id="F:1" error="false" width="5" name="TO_REAL" x="36" y="6">
 									<inputPin name="#0" negated="false">C:8</inputPin>
 									<outputPin name="#O" negated="false">C:6</outputPin>
 								</fun>
-								<fun id="F:3" error="false" width="5" name="ABS" x="26" y="11">
-									<inputPin name="#0" negated="false">C:11</inputPin>
-									<outputPin name="#O" negated="false">C:9</outputPin>
-								</fun>
-								<fun id="F:4" error="false" width="5" name="TO_REAL" x="12" y="6">
+								<fun id="F:2" error="false" width="5" name="ABS" x="26" y="11">
 									<inputPin name="#0" negated="false">C:0</inputPin>
-									<outputPin name="#O" negated="false">C:2</outputPin>
+									<outputPin name="#O" negated="false">C:18</outputPin>
+								</fun>
+								<fun id="F:3" error="false" width="5" name="TO_REAL" x="12" y="6">
+									<inputPin name="#0" negated="false">C:10</inputPin>
+									<outputPin name="#O" negated="false">C:4</outputPin>
+								</fun>
+								<fun id="F:14" error="false" width="5" name="NOT" x="7" y="6">
+									<inputPin name="#0" negated="false">C:9</inputPin>
+									<outputPin name="#O" negated="false">C:10</outputPin>
+								</fun>
+								<fun id="F:16" error="false" width="5" name="LIMIT" x="51" y="6">
+									<inputPin name="IN" negated="false">C:11</inputPin>
+									<inputPin name="MN" negated="false">C:12</inputPin>
+									<inputPin name="MX" negated="false">C:13</inputPin>
+									<outputPin name="#O" negated="false">C:14</outputPin>
+								</fun>
+								<fun id="F:20" error="false" width="5" name="LIMIT" x="51" y="11">
+									<inputPin name="IN" negated="false">C:18</inputPin>
+									<inputPin name="MN" negated="false">C:15</inputPin>
+									<inputPin name="MX" negated="false">C:16</inputPin>
+									<outputPin name="#O" negated="false">C:17</outputPin>
 								</fun>
 							</network>
 						</FBD>
 					</sourceCode>
 				</program>
-				<program name="encoders" version="1.0.0" creationDate="1761731489" lastModifiedDate="1761751223" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="">
+				<program name="encoders" version="1.0.0" creationDate="1761731489" lastModifiedDate="1764760273" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="">
 					<vars/>
 					<iecDeclaration active="FALSE"/>
 					<sourceCode type="ST">
 						<![CDATA[driver_left_channel_pulses_cnt := sysEncodersInputs[0].pulsesCount;
 driver_right_channel_pulses_cnt := sysEncodersInputs[1].pulsesCount;
-driver_left_channel_rev_cnt := sysEncodersInputs[0].revolutionsCount;
-driver_right_channel_rev_cnt := sysEncodersInputs[1].revolutionsCount;
 ]]>
 					</sourceCode>
 				</program>
@@ -6757,17 +6889,13 @@ END_FUNCTION_BLOCK
 				<![CDATA[(* Automatically generated by LogicLab, do not edit! *)
 	VAR_GLOBAL
 		{G:"Variables"}
-	driver_left_channel AT %MW201.0 : REAL := 0;
+	driver_left_channel_speed AT %MW201.0 : REAL := 0;
 		{G:"Variables"}
-	driver_right_channel AT %MW201.2 : REAL := 0;
+	driver_right_channel_speed AT %MW201.2 : REAL := 0;
 		{G:"Variables"}
-	driver_left_channel_pulses_cnt AT %MW201.4 : DINT := 0;
+	driver_left_channel_pulses_cnt AT %MW201.4 : DINT;
 		{G:"Variables"}
-	driver_right_channel_pulses_cnt AT %MW201.6 : DINT := 0;
-		{G:"Variables"}
-	driver_left_channel_rev_cnt AT %MW201.8 : DINT := 0;
-		{G:"Variables"}
-	driver_right_channel_rev_cnt AT %MW201.10 : DINT := 0;
+	driver_right_channel_pulses_cnt AT %MW201.6 : DINT;
 	END_VAR
 ]]>
 			</src>
@@ -6775,8 +6903,8 @@ END_FUNCTION_BLOCK
 				<![CDATA[(* Automatically generated, do not edit! *)
 
 VAR_GLOBAL CONSTANT
-$$ParDB : ARRAY[ 0..239 ] OF USINT; { HIDDEN:ON } { INIT:"service_robot_safety_controller.PLK+0" }
-$$ParDBLength  : DWORD := 6; { HIDDEN:ON }
+$$ParDB : ARRAY[ 0..159 ] OF USINT; { HIDDEN:ON } { INIT:"service_robot_safety_controller.PLK+0" }
+$$ParDBLength  : DWORD := 4; { HIDDEN:ON }
 END_VAR
 
 PROGRAM InitParDB WITH Init;
@@ -6789,9 +6917,9 @@ PROGRAM InitParDB
 		dummyCrc32: UDINT;
 	END_VAR
 
-	dummyCrc32 := 2590457633;
+	dummyCrc32 := 3373825377;
 
-	warningsKiller := sysDBase_SetExtTable( TO_DWORD( ADR($$ParDB) ), $$ParDBLength, 200, 0, 0, 2, 201, TO_DWORD( ADR(%MW201.0) ), 12, 2, 2590457633 );
+	warningsKiller := sysDBase_SetExtTable( TO_DWORD( ADR($$ParDB) ), $$ParDBLength, 200, 0, 0, 2, 201, TO_DWORD( ADR(%MW201.0) ), 8, 2, 3373825377 );
 
 END_PROGRAM
 
@@ -6852,7 +6980,7 @@ END_PROGRAM
 			</src>
 		</aux>
 		<workspace>
-			<root name="service_robot_safety_controller" nextID="967">
+			<root name="service_robot_safety_controller" nextID="1143">
 				<GlobalVars name="Global_vars" id="2"/>
 				<Pou name="safety" id="119"/>
 				<Pou name="watchdog" id="158" genHidden="false"/>
@@ -6895,7 +7023,7 @@ END_PROGRAM
 							<param>
 								<ipa>24577</ipa>
 								<address>24577</address>
-								<name>driver_left_channel</name>
+								<name>driver_left_channel_speed</name>
 								<typepar>4</typepar>
 								<typetarg>REAL</typetarg>
 								<value>0</value>
@@ -6919,7 +7047,7 @@ END_PROGRAM
 							<param>
 								<ipa>24579</ipa>
 								<address>24579</address>
-								<name>driver_right_channel</name>
+								<name>driver_right_channel_speed</name>
 								<typepar>4</typepar>
 								<typetarg>REAL</typetarg>
 								<value>0</value>
@@ -6946,7 +7074,7 @@ END_PROGRAM
 								<name>driver_left_channel_pulses_cnt</name>
 								<typepar>1</typepar>
 								<typetarg>DINT</typetarg>
-								<value>0</value>
+								<value/>
 								<min/>
 								<max/>
 								<ipamin/>
@@ -6958,7 +7086,7 @@ END_PROGRAM
 								<note/>
 								<form/>
 								<accesslevel>3</accesslevel>
-								<readonly>0</readonly>
+								<readonly>1</readonly>
 								<shortname/>
 								<size>0</size>
 								<dataBlock>%MW201.4</dataBlock>
@@ -6970,7 +7098,7 @@ END_PROGRAM
 								<name>driver_right_channel_pulses_cnt</name>
 								<typepar>1</typepar>
 								<typetarg>DINT</typetarg>
-								<value>0</value>
+								<value/>
 								<min/>
 								<max/>
 								<ipamin/>
@@ -6982,58 +7110,10 @@ END_PROGRAM
 								<note/>
 								<form/>
 								<accesslevel>3</accesslevel>
-								<readonly>0</readonly>
+								<readonly>1</readonly>
 								<shortname/>
 								<size>0</size>
 								<dataBlock>%MW201.6</dataBlock>
-								<subindex>0</subindex>
-							</param>
-							<param>
-								<ipa>24592</ipa>
-								<address>24592</address>
-								<name>driver_left_channel_rev_cnt</name>
-								<typepar>1</typepar>
-								<typetarg>DINT</typetarg>
-								<value>0</value>
-								<min/>
-								<max/>
-								<ipamin/>
-								<ipamax/>
-								<scale>1</scale>
-								<offs>0</offs>
-								<um/>
-								<description/>
-								<note/>
-								<form/>
-								<accesslevel>3</accesslevel>
-								<readonly>0</readonly>
-								<shortname/>
-								<size>0</size>
-								<dataBlock>%MW201.8</dataBlock>
-								<subindex>0</subindex>
-							</param>
-							<param>
-								<ipa>24596</ipa>
-								<address>24596</address>
-								<name>driver_right_channel_rev_cnt</name>
-								<typepar>1</typepar>
-								<typetarg>DINT</typetarg>
-								<value>0</value>
-								<min/>
-								<max/>
-								<ipamin/>
-								<ipamax/>
-								<scale>1</scale>
-								<offs>0</offs>
-								<um/>
-								<description/>
-								<note/>
-								<form/>
-								<accesslevel>3</accesslevel>
-								<readonly>0</readonly>
-								<shortname/>
-								<size>0</size>
-								<dataBlock>%MW201.10</dataBlock>
 								<subindex>0</subindex>
 							</param>
 						</paramsRO>
@@ -7172,14 +7252,6 @@ END_PROGRAM
 					<Ethernet protocol="" enableMaster="0" enableSlave="1" enableSlaveRtuGateway="0" rtuGatewayDefaultTimeout="100" slavePort="502"/>
 					<SketchContent>// shared variables can be accessed with PLCIn.varname and PLCOut.varname
 
-#include &lt;WiFi.h&gt;
-
-char ssid[] = "MikroLAB";    // your network SSID (name)
-char pass[] = "@2wsxdr%5";    // your network password (use for WPA, or use as key for WEP)
-int keyIndex = 0;             // your network key Index number (needed only for WEP)
-
-int status = WL_IDLE_STATUS;
-
 void setup()
 {
 	// Configure static IP address
@@ -7189,26 +7261,11 @@ void setup()
 	IPAddress subnet(255, 255, 255, 0);
 	// If cable is not connected this will block the start of PLC with about 60s of timeout!
 	Ethernet.begin(ip, dns, gateway, subnet);
-	
-	status = WiFi.beginAP(ssid,pass);
-    
-    if(status != WL_AP_LISTENING){
-       Serial.println("Creating access point failed");
-      // don't continue
-      while (true);
-    }
-
-    // wait 10 seconds for connection:
-    delay(1000);
-    // start the web server on port 80
-    //server.begin();
-    // you're connected now, so print out the status
-    //printWiFiStatus();
 }
 
 void loop()
 {
-
+    
 }</SketchContent>
 					<SketchLibraries/>
 				</ArduinoPMC_1p0>
