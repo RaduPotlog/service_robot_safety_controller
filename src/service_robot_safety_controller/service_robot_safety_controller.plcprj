@@ -286,7 +286,7 @@
 						</LD2>
 					</sourceCode>
 				</program>
-				<program name="driver" version="1.0.0" creationDate="1761719245" lastModifiedDate="1764760312" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="">
+				<program name="driver" version="1.0.0" creationDate="1761719245" lastModifiedDate="1764945142" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="">
 					<vars/>
 					<iecDeclaration active="FALSE"/>
 					<sourceCode type="FBD">
@@ -300,13 +300,13 @@
 								</conn>
 								<conn id="C:1" error="false">
 									<segment xStart="23" yStart="6" xEnd="24" yEnd="6"/>
-									<startPin>O:12.2</startPin>
+									<startPin>O:17.2</startPin>
 									<endPin>I:0</endPin>
 								</conn>
 								<conn id="C:2" error="false">
 									<segment xStart="24" yStart="6" xEnd="31" yEnd="6"/>
 									<startPin>I:0</startPin>
-									<endPin>O:11.0</endPin>
+									<endPin>O:16.0</endPin>
 								</conn>
 								<cross id="I:0" error="false" x="24" y="6">
 									<top/>
@@ -317,163 +317,154 @@
 								<conn id="C:3" error="false">
 									<segment xStart="18" yStart="6" xEnd="19" yEnd="6"/>
 									<startPin>F:2.#O</startPin>
-									<endPin>O:12.0</endPin>
+									<endPin>O:17.0</endPin>
 								</conn>
 								<conn id="C:4" error="false">
 									<segment xStart="9" yStart="8" xEnd="18" yEnd="8"/>
 									<segment xEnd="18" yEnd="7"/>
 									<segment xEnd="19" yEnd="7"/>
-									<startPin>V:6</startPin>
-									<endPin>O:12.1</endPin>
+									<startPin>V:7</startPin>
+									<endPin>O:17.1</endPin>
 								</conn>
 								<conn id="C:5" error="false">
 									<segment xStart="30" yStart="7" xEnd="31" yEnd="7"/>
-									<startPin>K:9</startPin>
-									<endPin>O:11.1</endPin>
+									<startPin>K:10</startPin>
+									<endPin>O:16.1</endPin>
 								</conn>
 								<conn id="C:6" error="false">
 									<segment xStart="34" yStart="6" xEnd="36" yEnd="6"/>
-									<startPin>O:11.2</startPin>
+									<startPin>O:16.2</startPin>
 									<endPin>F:3.#0</endPin>
 								</conn>
 								<conn id="C:7" error="false">
 									<segment xStart="41" yStart="6" xEnd="44" yEnd="6"/>
 									<startPin>F:3.#O</startPin>
-									<endPin>O:13.0</endPin>
+									<endPin>O:18.0</endPin>
 								</conn>
 								<conn id="C:8" error="false">
 									<segment xStart="40" yStart="9" xEnd="42" yEnd="9"/>
 									<segment xEnd="42" yEnd="7"/>
 									<segment xEnd="44" yEnd="7"/>
-									<startPin>K:10</startPin>
-									<endPin>O:13.1</endPin>
+									<startPin>K:11</startPin>
+									<endPin>O:18.1</endPin>
 								</conn>
 								<conn id="C:9" error="false">
-									<segment xStart="6" yStart="6" xEnd="7" yEnd="6"/>
-									<startPin>V:5</startPin>
-									<endPin>F:4.#0</endPin>
-								</conn>
-								<conn id="C:10" error="false">
-									<segment xStart="12" yStart="6" xEnd="13" yEnd="6"/>
-									<startPin>F:4.#O</startPin>
-									<endPin>F:2.#0</endPin>
-								</conn>
-								<conn id="C:11" error="false">
 									<segment xStart="48" yStart="9" xEnd="49" yEnd="9"/>
 									<segment xEnd="49" yEnd="7"/>
 									<segment xEnd="51" yEnd="7"/>
-									<startPin>K:16</startPin>
-									<endPin>F:14.MN</endPin>
+									<startPin>K:12</startPin>
+									<endPin>F:4.MN</endPin>
 								</conn>
-								<conn id="C:12" error="false">
+								<conn id="C:10" error="false">
 									<segment xStart="48" yStart="10" xEnd="50" yEnd="10"/>
 									<segment xEnd="50" yEnd="8"/>
 									<segment xEnd="51" yEnd="8"/>
-									<startPin>K:18</startPin>
-									<endPin>F:14.MX</endPin>
+									<startPin>K:13</startPin>
+									<endPin>F:4.MX</endPin>
+								</conn>
+								<conn id="C:11" error="false">
+									<segment xStart="56" yStart="6" xEnd="58" yEnd="6"/>
+									<startPin>F:4.#O</startPin>
+									<endPin>V:9</endPin>
+								</conn>
+								<conn id="C:12" error="false">
+									<segment xStart="48" yStart="6" xEnd="51" yEnd="6"/>
+									<startPin>O:18.2</startPin>
+									<endPin>F:4.IN</endPin>
 								</conn>
 								<conn id="C:13" error="false">
-									<segment xStart="56" yStart="6" xEnd="58" yEnd="6"/>
-									<startPin>F:14.#O</startPin>
-									<endPin>V:8</endPin>
+									<segment xStart="48" yStart="12" xEnd="51" yEnd="12"/>
+									<startPin>K:15</startPin>
+									<endPin>F:5.MN</endPin>
 								</conn>
 								<conn id="C:14" error="false">
-									<segment xStart="48" yStart="6" xEnd="51" yEnd="6"/>
-									<startPin>O:13.2</startPin>
-									<endPin>F:14.IN</endPin>
+									<segment xStart="48" yStart="13" xEnd="51" yEnd="13"/>
+									<startPin>K:14</startPin>
+									<endPin>F:5.MX</endPin>
 								</conn>
 								<conn id="C:15" error="false">
-									<segment xStart="48" yStart="12" xEnd="51" yEnd="12"/>
-									<startPin>K:23</startPin>
-									<endPin>F:20.MN</endPin>
-								</conn>
-								<conn id="C:16" error="false">
-									<segment xStart="48" yStart="13" xEnd="51" yEnd="13"/>
-									<startPin>K:22</startPin>
-									<endPin>F:20.MX</endPin>
-								</conn>
-								<conn id="C:17" error="false">
 									<segment xStart="31" yStart="11" xEnd="51" yEnd="11"/>
 									<startPin>F:1.#O</startPin>
-									<endPin>F:20.IN</endPin>
+									<endPin>F:5.IN</endPin>
 								</conn>
-								<conn id="C:18" error="false">
+								<conn id="C:16" error="false">
 									<segment xStart="56" yStart="11" xEnd="58" yEnd="11"/>
-									<startPin>F:20.#O</startPin>
-									<endPin>V:7</endPin>
+									<startPin>F:5.#O</startPin>
+									<endPin>V:8</endPin>
 								</conn>
-								<const id="K:9" error="false" name="0.0" x="30" y="7">
+								<conn id="C:17" error="false">
+									<segment xStart="6" yStart="6" xEnd="13" yEnd="6"/>
+									<startPin>V:6</startPin>
+									<endPin>F:2.#0</endPin>
+								</conn>
+								<const id="K:10" error="false" name="0.0" x="30" y="7">
 									<pin>C:5</pin>
 								</const>
-								<const id="K:10" error="false" name="5.0" x="40" y="9">
+								<const id="K:11" error="false" name="5.0" x="40" y="9">
 									<pin>C:8</pin>
 								</const>
-								<const id="K:16" error="false" name="-5.0" x="48" y="9">
-									<pin>C:11</pin>
-								</const>
-								<const id="K:18" error="false" name="5.0" x="48" y="10">
-									<pin>C:12</pin>
-								</const>
-								<const id="K:22" error="false" name="1.0" x="48" y="13">
-									<pin>C:16</pin>
-								</const>
-								<const id="K:23" error="false" name="-1.0" x="48" y="12">
-									<pin>C:15</pin>
-								</const>
-								<var id="V:5" error="false" type="Input" name="motor_coil" x="6" y="6">
+								<const id="K:12" error="false" name="-5.0" x="48" y="9">
 									<pin>C:9</pin>
+								</const>
+								<const id="K:13" error="false" name="5.0" x="48" y="10">
+									<pin>C:10</pin>
+								</const>
+								<const id="K:14" error="false" name="1.0" x="48" y="13">
+									<pin>C:14</pin>
+								</const>
+								<const id="K:15" error="false" name="-1.0" x="48" y="12">
+									<pin>C:13</pin>
+								</const>
+								<var id="V:6" error="false" type="Input" name="motor_coil" x="6" y="6">
+									<pin>C:17</pin>
 								</var>
-								<var id="V:6" error="false" type="Input" name="driver_right_channel_speed" x="9" y="8">
+								<var id="V:7" error="false" type="Input" name="driver_right_channel_speed" x="9" y="8">
 									<pin>C:4</pin>
 								</var>
-								<var id="V:7" error="false" type="Output" name="right_motor_out" x="58" y="11">
-									<pin>C:18</pin>
+								<var id="V:8" error="false" type="Output" name="right_motor_out" x="58" y="11">
+									<pin>C:16</pin>
 								</var>
-								<var id="V:8" error="false" type="Output" name="right_motor_dir_out" x="58" y="6">
-									<pin>C:13</pin>
+								<var id="V:9" error="false" type="Output" name="right_motor_dir_out" x="58" y="6">
+									<pin>C:11</pin>
 								</var>
-								<op id="O:11" error="false" width="3" name="GE" x="31" y="6">
+								<op id="O:16" error="false" width="3" name="GE" x="31" y="6">
 									<inputPin name="0" negated="false">C:2</inputPin>
 									<inputPin name="1" negated="false">C:5</inputPin>
 									<outputPin name="2" negated="false">C:6</outputPin>
 								</op>
-								<op id="O:12" error="false" width="4" name="MUL" x="19" y="6">
+								<op id="O:17" error="false" width="4" name="MUL" x="19" y="6">
 									<inputPin name="0" negated="false">C:3</inputPin>
 									<inputPin name="1" negated="false">C:4</inputPin>
 									<outputPin name="2" negated="false">C:1</outputPin>
 								</op>
-								<op id="O:13" error="false" width="4" name="MUL" x="44" y="6">
+								<op id="O:18" error="false" width="4" name="MUL" x="44" y="6">
 									<inputPin name="0" negated="false">C:7</inputPin>
 									<inputPin name="1" negated="false">C:8</inputPin>
-									<outputPin name="2" negated="false">C:14</outputPin>
+									<outputPin name="2" negated="false">C:12</outputPin>
 								</op>
 								<fun id="F:1" error="false" width="5" name="ABS" x="26" y="11">
 									<inputPin name="#0" negated="false">C:0</inputPin>
-									<outputPin name="#O" negated="false">C:17</outputPin>
+									<outputPin name="#O" negated="false">C:15</outputPin>
 								</fun>
 								<fun id="F:2" error="false" width="5" name="TO_REAL" x="13" y="6">
-									<inputPin name="#0" negated="false">C:10</inputPin>
+									<inputPin name="#0" negated="false">C:17</inputPin>
 									<outputPin name="#O" negated="false">C:3</outputPin>
 								</fun>
 								<fun id="F:3" error="false" width="5" name="TO_REAL" x="36" y="6">
 									<inputPin name="#0" negated="false">C:6</inputPin>
 									<outputPin name="#O" negated="false">C:7</outputPin>
 								</fun>
-								<fun id="F:4" error="false" width="5" name="NOT" x="7" y="6">
-									<inputPin name="#0" negated="false">C:9</inputPin>
-									<outputPin name="#O" negated="false">C:10</outputPin>
+								<fun id="F:4" error="false" width="5" name="LIMIT" x="51" y="6">
+									<inputPin name="IN" negated="false">C:12</inputPin>
+									<inputPin name="MN" negated="false">C:9</inputPin>
+									<inputPin name="MX" negated="false">C:10</inputPin>
+									<outputPin name="#O" negated="false">C:11</outputPin>
 								</fun>
-								<fun id="F:14" error="false" width="5" name="LIMIT" x="51" y="6">
-									<inputPin name="IN" negated="false">C:14</inputPin>
-									<inputPin name="MN" negated="false">C:11</inputPin>
-									<inputPin name="MX" negated="false">C:12</inputPin>
-									<outputPin name="#O" negated="false">C:13</outputPin>
-								</fun>
-								<fun id="F:20" error="false" width="5" name="LIMIT" x="51" y="11">
-									<inputPin name="IN" negated="false">C:17</inputPin>
-									<inputPin name="MN" negated="false">C:15</inputPin>
-									<inputPin name="MX" negated="false">C:16</inputPin>
-									<outputPin name="#O" negated="false">C:18</outputPin>
+								<fun id="F:5" error="false" width="5" name="LIMIT" x="51" y="11">
+									<inputPin name="IN" negated="false">C:15</inputPin>
+									<inputPin name="MN" negated="false">C:13</inputPin>
+									<inputPin name="MX" negated="false">C:14</inputPin>
+									<outputPin name="#O" negated="false">C:16</outputPin>
 								</fun>
 							</network>
 							<network order="N:2" width="200" height="18" disabled="false" disableCondition="" error="false">
@@ -485,13 +476,13 @@
 								</conn>
 								<conn id="C:1" error="false">
 									<segment xStart="23" yStart="6" xEnd="24" yEnd="6"/>
-									<startPin>O:12.2</startPin>
+									<startPin>O:18.2</startPin>
 									<endPin>I:0</endPin>
 								</conn>
 								<conn id="C:2" error="false">
 									<segment xStart="24" yStart="6" xEnd="31" yEnd="6"/>
 									<startPin>I:0</startPin>
-									<endPin>O:11.0</endPin>
+									<endPin>O:17.0</endPin>
 								</conn>
 								<cross id="I:0" error="false" x="24" y="6">
 									<top/>
@@ -502,130 +493,125 @@
 								<conn id="C:3" error="false">
 									<segment xStart="8" yStart="8" xEnd="19" yEnd="8"/>
 									<segment xEnd="19" yEnd="7"/>
-									<startPin>V:6</startPin>
-									<endPin>O:12.1</endPin>
+									<startPin>V:8</startPin>
+									<endPin>O:18.1</endPin>
 								</conn>
 								<conn id="C:4" error="false">
 									<segment xStart="17" yStart="6" xEnd="19" yEnd="6"/>
 									<startPin>F:3.#O</startPin>
-									<endPin>O:12.0</endPin>
+									<endPin>O:18.0</endPin>
 								</conn>
 								<conn id="C:5" error="false">
 									<segment xStart="30" yStart="7" xEnd="31" yEnd="7"/>
-									<startPin>K:9</startPin>
-									<endPin>O:11.1</endPin>
+									<startPin>K:11</startPin>
+									<endPin>O:17.1</endPin>
 								</conn>
 								<conn id="C:6" error="false">
 									<segment xStart="41" yStart="6" xEnd="44" yEnd="6"/>
 									<startPin>F:1.#O</startPin>
-									<endPin>O:10.0</endPin>
+									<endPin>O:16.0</endPin>
 								</conn>
 								<conn id="C:7" error="false">
 									<segment xStart="40" yStart="9" xEnd="44" yEnd="9"/>
 									<segment xEnd="44" yEnd="7"/>
-									<startPin>K:8</startPin>
-									<endPin>O:10.1</endPin>
+									<startPin>K:10</startPin>
+									<endPin>O:16.1</endPin>
 								</conn>
 								<conn id="C:8" error="false">
 									<segment xStart="34" yStart="6" xEnd="36" yEnd="6"/>
-									<startPin>O:11.2</startPin>
+									<startPin>O:17.2</startPin>
 									<endPin>F:1.#0</endPin>
 								</conn>
 								<conn id="C:9" error="false">
-									<segment xStart="6" yStart="6" xEnd="7" yEnd="6"/>
-									<startPin>V:7</startPin>
-									<endPin>F:14.#0</endPin>
+									<segment xStart="48" yStart="6" xEnd="51" yEnd="6"/>
+									<startPin>O:16.2</startPin>
+									<endPin>F:4.IN</endPin>
 								</conn>
 								<conn id="C:10" error="false">
-									<segment xStart="12" yStart="6" xEnd="12" yEnd="6"/>
-									<startPin>F:14.#O</startPin>
-									<endPin>F:3.#0</endPin>
-								</conn>
-								<conn id="C:11" error="false">
-									<segment xStart="48" yStart="6" xEnd="51" yEnd="6"/>
-									<startPin>O:10.2</startPin>
-									<endPin>F:16.IN</endPin>
-								</conn>
-								<conn id="C:12" error="false">
 									<segment xStart="48" yStart="9" xEnd="49" yEnd="9"/>
 									<segment xEnd="49" yEnd="7"/>
 									<segment xEnd="51" yEnd="7"/>
-									<startPin>K:17</startPin>
-									<endPin>F:16.MN</endPin>
+									<startPin>K:12</startPin>
+									<endPin>F:4.MN</endPin>
 								</conn>
-								<conn id="C:13" error="false">
+								<conn id="C:11" error="false">
 									<segment xStart="48" yStart="10" xEnd="50" yEnd="10"/>
 									<segment xEnd="50" yEnd="8"/>
 									<segment xEnd="51" yEnd="8"/>
-									<startPin>K:18</startPin>
-									<endPin>F:16.MX</endPin>
+									<startPin>K:13</startPin>
+									<endPin>F:4.MX</endPin>
+								</conn>
+								<conn id="C:12" error="false">
+									<segment xStart="56" yStart="6" xEnd="58" yEnd="6"/>
+									<startPin>F:4.#O</startPin>
+									<endPin>V:6</endPin>
+								</conn>
+								<conn id="C:13" error="false">
+									<segment xStart="48" yStart="12" xEnd="51" yEnd="12"/>
+									<startPin>K:15</startPin>
+									<endPin>F:5.MN</endPin>
 								</conn>
 								<conn id="C:14" error="false">
-									<segment xStart="56" yStart="6" xEnd="58" yEnd="6"/>
-									<startPin>F:16.#O</startPin>
-									<endPin>V:4</endPin>
+									<segment xStart="48" yStart="13" xEnd="51" yEnd="13"/>
+									<startPin>K:14</startPin>
+									<endPin>F:5.MX</endPin>
 								</conn>
 								<conn id="C:15" error="false">
-									<segment xStart="48" yStart="12" xEnd="51" yEnd="12"/>
-									<startPin>K:23</startPin>
-									<endPin>F:20.MN</endPin>
+									<segment xStart="56" yStart="11" xEnd="58" yEnd="11"/>
+									<startPin>F:5.#O</startPin>
+									<endPin>V:7</endPin>
 								</conn>
 								<conn id="C:16" error="false">
-									<segment xStart="48" yStart="13" xEnd="51" yEnd="13"/>
-									<startPin>K:22</startPin>
-									<endPin>F:20.MX</endPin>
-								</conn>
-								<conn id="C:17" error="false">
-									<segment xStart="56" yStart="11" xEnd="58" yEnd="11"/>
-									<startPin>F:20.#O</startPin>
-									<endPin>V:5</endPin>
-								</conn>
-								<conn id="C:18" error="false">
 									<segment xStart="31" yStart="11" xEnd="51" yEnd="11"/>
 									<startPin>F:2.#O</startPin>
-									<endPin>F:20.IN</endPin>
+									<endPin>F:5.IN</endPin>
 								</conn>
-								<const id="K:8" error="false" name="5.0" x="40" y="9">
+								<conn id="C:17" error="false">
+									<segment xStart="6" yStart="6" xEnd="12" yEnd="6"/>
+									<startPin>V:9</startPin>
+									<endPin>F:3.#0</endPin>
+								</conn>
+								<const id="K:10" error="false" name="5.0" x="40" y="9">
 									<pin>C:7</pin>
 								</const>
-								<const id="K:9" error="false" name="0.0" x="30" y="7">
+								<const id="K:11" error="false" name="0.0" x="30" y="7">
 									<pin>C:5</pin>
 								</const>
-								<const id="K:17" error="false" name="-5.0" x="48" y="9">
-									<pin>C:12</pin>
+								<const id="K:12" error="false" name="-5.0" x="48" y="9">
+									<pin>C:10</pin>
 								</const>
-								<const id="K:18" error="false" name="5.0" x="48" y="10">
+								<const id="K:13" error="false" name="5.0" x="48" y="10">
+									<pin>C:11</pin>
+								</const>
+								<const id="K:14" error="false" name="1.0" x="48" y="13">
+									<pin>C:14</pin>
+								</const>
+								<const id="K:15" error="false" name="-1.0" x="48" y="12">
 									<pin>C:13</pin>
 								</const>
-								<const id="K:22" error="false" name="1.0" x="48" y="13">
-									<pin>C:16</pin>
-								</const>
-								<const id="K:23" error="false" name="-1.0" x="48" y="12">
+								<var id="V:6" error="false" type="Output" name="left_motor_dir_out" x="58" y="6">
+									<pin>C:12</pin>
+								</var>
+								<var id="V:7" error="false" type="Output" name="left_motor_out" x="58" y="11">
 									<pin>C:15</pin>
-								</const>
-								<var id="V:4" error="false" type="Output" name="left_motor_dir_out" x="58" y="6">
-									<pin>C:14</pin>
 								</var>
-								<var id="V:5" error="false" type="Output" name="left_motor_out" x="58" y="11">
-									<pin>C:17</pin>
-								</var>
-								<var id="V:6" error="false" type="Input" name="driver_left_channel_speed" x="8" y="8">
+								<var id="V:8" error="false" type="Input" name="driver_left_channel_speed" x="8" y="8">
 									<pin>C:3</pin>
 								</var>
-								<var id="V:7" error="false" type="Input" name="motor_coil" x="6" y="6">
-									<pin>C:9</pin>
+								<var id="V:9" error="false" type="Input" name="motor_coil" x="6" y="6">
+									<pin>C:17</pin>
 								</var>
-								<op id="O:10" error="false" width="4" name="MUL" x="44" y="6">
+								<op id="O:16" error="false" width="4" name="MUL" x="44" y="6">
 									<inputPin name="0" negated="false">C:6</inputPin>
 									<inputPin name="1" negated="false">C:7</inputPin>
-									<outputPin name="2" negated="false">C:11</outputPin>
+									<outputPin name="2" negated="false">C:9</outputPin>
 								</op>
-								<op id="O:11" error="false" width="3" name="GE" x="31" y="6">
+								<op id="O:17" error="false" width="3" name="GE" x="31" y="6">
 									<inputPin name="0" negated="false">C:2</inputPin>
 									<inputPin name="1" negated="false">C:5</inputPin>
 									<outputPin name="2" negated="false">C:8</outputPin>
 								</op>
-								<op id="O:12" error="false" width="4" name="MUL" x="19" y="6">
+								<op id="O:18" error="false" width="4" name="MUL" x="19" y="6">
 									<inputPin name="0" negated="false">C:4</inputPin>
 									<inputPin name="1" negated="false">C:3</inputPin>
 									<outputPin name="2" negated="false">C:1</outputPin>
@@ -636,27 +622,23 @@
 								</fun>
 								<fun id="F:2" error="false" width="5" name="ABS" x="26" y="11">
 									<inputPin name="#0" negated="false">C:0</inputPin>
-									<outputPin name="#O" negated="false">C:18</outputPin>
+									<outputPin name="#O" negated="false">C:16</outputPin>
 								</fun>
 								<fun id="F:3" error="false" width="5" name="TO_REAL" x="12" y="6">
-									<inputPin name="#0" negated="false">C:10</inputPin>
+									<inputPin name="#0" negated="false">C:17</inputPin>
 									<outputPin name="#O" negated="false">C:4</outputPin>
 								</fun>
-								<fun id="F:14" error="false" width="5" name="NOT" x="7" y="6">
-									<inputPin name="#0" negated="false">C:9</inputPin>
-									<outputPin name="#O" negated="false">C:10</outputPin>
+								<fun id="F:4" error="false" width="5" name="LIMIT" x="51" y="6">
+									<inputPin name="IN" negated="false">C:9</inputPin>
+									<inputPin name="MN" negated="false">C:10</inputPin>
+									<inputPin name="MX" negated="false">C:11</inputPin>
+									<outputPin name="#O" negated="false">C:12</outputPin>
 								</fun>
-								<fun id="F:16" error="false" width="5" name="LIMIT" x="51" y="6">
-									<inputPin name="IN" negated="false">C:11</inputPin>
-									<inputPin name="MN" negated="false">C:12</inputPin>
-									<inputPin name="MX" negated="false">C:13</inputPin>
-									<outputPin name="#O" negated="false">C:14</outputPin>
-								</fun>
-								<fun id="F:20" error="false" width="5" name="LIMIT" x="51" y="11">
-									<inputPin name="IN" negated="false">C:18</inputPin>
-									<inputPin name="MN" negated="false">C:15</inputPin>
-									<inputPin name="MX" negated="false">C:16</inputPin>
-									<outputPin name="#O" negated="false">C:17</outputPin>
+								<fun id="F:5" error="false" width="5" name="LIMIT" x="51" y="11">
+									<inputPin name="IN" negated="false">C:16</inputPin>
+									<inputPin name="MN" negated="false">C:13</inputPin>
+									<inputPin name="MX" negated="false">C:14</inputPin>
+									<outputPin name="#O" negated="false">C:15</outputPin>
 								</fun>
 							</network>
 						</FBD>
@@ -6980,7 +6962,7 @@ END_PROGRAM
 			</src>
 		</aux>
 		<workspace>
-			<root name="service_robot_safety_controller" nextID="1143">
+			<root name="service_robot_safety_controller" nextID="1183">
 				<GlobalVars name="Global_vars" id="2"/>
 				<Pou name="safety" id="119"/>
 				<Pou name="watchdog" id="158" genHidden="false"/>
